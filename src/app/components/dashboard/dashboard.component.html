@@ -1,0 +1,21 @@
+<main>
+    <h1>Dashboard</h1>
+    <div class="orders">
+        <div class="order" *ngFor='let item of orderData' >
+            <h1>{{item.label}}</h1>
+            <h3 class="{{item.class}}" >{{item.quantity}}</h3>
+            <p>{{item.status}}</p>
+            <h6>View Details</h6>
+        </div>
+    </div>
+ <h2>Statistic</h2>
+        <div class="statistic">
+            <div class="stocks">
+                <h1>Stocks</h1>
+            </div>
+            <div class="stocks">
+                <h1>Orders</h1>
+            </div>
+        </div>
+
+</main>

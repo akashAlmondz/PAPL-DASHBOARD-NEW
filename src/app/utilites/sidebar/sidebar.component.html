@@ -1,0 +1,10 @@
+<main>
+    <img src="/assets/images/logo.jpg" alt="logo">
+    <div class="menu-options" >
+        <div class="option" *ngFor="let item of sidebarData" [ngClass]="sidebarValue? 'open':'close'" >
+            <i class="{{item.icon}}"></i>
+            <p>{{item.label}}  </p>
+        </div>
+       
+    </div>
+</main>

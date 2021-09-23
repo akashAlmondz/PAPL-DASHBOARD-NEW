@@ -1,0 +1,5 @@
+<app-sidebar [sidebarValue]="toggleValue" ></app-sidebar>
+<div>
+  <app-header (checkToggle)="checkToggle($event)"></app-header>
+  <router-outlet></router-outlet>
+</div>
