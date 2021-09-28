@@ -10,9 +10,23 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   orderData = [
-    {class:'a', label:"Pending Orders",quantity:14,status:"Orders are pending"},
-    {class:'b', label:"Closed Orders",quantity:75,status:"Orders has been closed"},
-    {class:'c', label:"Total Orders",quantity:245,status:"All Orders"},
+    {class:'a', label:"Remaining QR codes",quantity:14,status:"QR codes are reamining"},
+    {class:'b', label:"Scanned QR codes",quantity:75,status:"QR codes are scanned"},
+    {class:'c', label:"Total QR codes",quantity:245,status:"Total QR codes"},
+  ]
+
+  reportData =[
+    {srno:1,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:2,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:3,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:4,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:5,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:6,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:7,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:8,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:9,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:10,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
+    {srno:11,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
   ]
 
   ngOnInit(): void {

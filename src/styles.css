@@ -3,4 +3,4 @@
 
 *{margin: 0;padding: 0;box-sizing: border-box;}
 app-root{display: flex;}
-p,h1,h2,h6{font-family: 'Quicksand', sans-serif;}
+p,h1,h2,h6,th,td{font-family: 'Quicksand', sans-serif;}
