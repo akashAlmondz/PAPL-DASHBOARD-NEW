@@ -11,6 +11,9 @@ export class DashboardService {
   
   public dashboardTable(){
     return this.http.get(`${environment.authlink}users/scannedData`);
-    
+  }
+
+  public QRcode(){
+    return this.http.get(`${environment.authlink}qr-code/numberofQR`)
   }
 }

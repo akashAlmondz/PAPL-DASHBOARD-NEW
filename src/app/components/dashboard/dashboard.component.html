@@ -1,9 +1,9 @@
 <main>
     <h1>Dashboard</h1>
     <div class="orders">
-        <div class="order" *ngFor='let item of orderData' >
+        <div class="order" *ngFor='let item of orderData index as i'  >
             <h1>{{item.label}}</h1>
-            <h3 class="{{item.class}}" >{{item.quantity}}</h3>
+            <h3 class="{{item.class}}" >{{QRdata[i]}}</h3>
             <p>{{item.status}}</p>
           
         </div>
@@ -11,7 +11,7 @@
  <h2>Statistic</h2>
         <div class="statistic">
             <div class="stocks">
-                <h1>Stocks</h1>
+                <h1 (click)='test()' >Stocks</h1>
             </div>
             <div class="stocks">
                 <h1>Orders</h1>
@@ -24,6 +24,7 @@
        <th>Phone Number</th>
        <th>No. Of Scans</th>
        <th>Shop</th>
+       <th>Address</th>
        <th>Date & Time</th>
        <th>Scheme</th>
         
@@ -34,6 +35,7 @@
         <td>{{item.phoneNumber}}</td>
         <td>{{item.numberOfScan}}</td>
         <td>{{item.shop}}</td>
+        <td>{{item.address}}</td>
         <td>{{item.createdAt}}</td>
         <td>{{item.scheme}}</td>
     </tr>

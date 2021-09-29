@@ -16,29 +16,21 @@ export class DashboardComponent implements OnInit {
   constructor(private dashBoardService: DashboardService) { }  
  
   data:any=[]; 
-
+  QRdata:any=[];
+  
   orderData = [
-    {class:'a', label:"Remaining QR codes",quantity:14,status:"QR codes are reamining"},
-    {class:'b', label:"Scanned QR codes",quantity:75,status:"QR codes are scanned"},
-    {class:'c', label:"Total QR codes",quantity:245,status:"Total QR codes"},
+    {class:'a', label:"Total QR codes",quantity:this.QRdata[0],status:"QR codes are reamining"},
+    {class:'b', label:"Scanned QR codes",quantity:this.QRdata[1],status:"QR codes are scanned"},
+    {class:'c', label:"Remaining QR codes",quantity:this.QRdata[2],status:"Total QR codes"},
   ]
-
-  reportData =[
-    {srno:1,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:2,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:3,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:4,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:5,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:6,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:7,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:8,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:9,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:10,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-    {srno:11,mobile:'+91-9466045451',scans:5,shop:'NgShop',dateTime:'11/02/2021  14:18:09',scheme:'Scan More Win More'},
-  ]
+ test(){
+   console.log(this.QRdata[0])
+ }
+ 
 
   ngOnInit(): void {
     this.dashBoardService.dashboardTable().subscribe(x=>this.data=x);
+    this.dashBoardService.QRcode().subscribe(y=>this.QRdata=y);
   }
 
 }
