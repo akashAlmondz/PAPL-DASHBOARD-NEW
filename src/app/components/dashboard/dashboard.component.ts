@@ -1,4 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DashboardService } from 'src/app/services/dashboard.service';
+import { environment } from 'src/environments/environment';
+import { DashboardDto } from './dashboard-dto/dashboard.dto';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +12,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private dashBoardService: DashboardService) { }  
+ 
+  data:any=[]; 
 
   orderData = [
     {class:'a', label:"Remaining QR codes",quantity:14,status:"QR codes are reamining"},
@@ -30,6 +38,7 @@ export class DashboardComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+    this.dashBoardService.dashboardTable().subscribe(x=>this.data=x);
   }
 
 }

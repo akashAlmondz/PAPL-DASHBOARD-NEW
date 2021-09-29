@@ -20,7 +20,7 @@
 
 <table>
     <tr>
-       <th>Sr. No.</th>
+       <th  >Sr. No.</th>
        <th>Phone Number</th>
        <th>No. Of Scans</th>
        <th>Shop</th>
@@ -28,13 +28,13 @@
        <th>Scheme</th>
         
     </tr>
-
-    <tr *ngFor="let item of reportData" >
-        <td>{{item.srno}}</td>
-        <td>{{item.mobile}}</td>
-        <td>{{item.scans}}</td>
+    
+    <tr *ngFor="let item of data , index as i" >
+        <td>{{i+1}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.numberOfScan}}</td>
         <td>{{item.shop}}</td>
-        <td>{{item.dateTime}}</td>
+        <td>{{item.createdAt}}</td>
         <td>{{item.scheme}}</td>
     </tr>
 
