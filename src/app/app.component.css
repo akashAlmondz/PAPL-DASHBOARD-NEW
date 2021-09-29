@@ -1,0 +1,4 @@
+div{transition: .4s; background-color: rgb(245, 245, 245);width:100%;padding: 0 40px;}
+.big{margin-left: 80px;}
+.small{margin-left: 260px;}
+app-sidebar{height: 100vh;box-shadow: 3px 5px 10px rgba(170, 170, 170, 0.144);position: fixed;}

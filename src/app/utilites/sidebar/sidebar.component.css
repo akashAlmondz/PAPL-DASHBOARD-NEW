@@ -1,0 +1,17 @@
+body{box-shadow: 4px 8px 20px rgba(138, 138, 138, 0.63);}
+main{ height: 100vh;display: flex;flex-direction: column;padding: 20px 10px;align-items: center;box-sizing: border-box;}
+main img{height: 50px;margin-bottom: 20px;}
+.menu-options{display: flex;flex-direction: column;}
+.option{transition-duration: .4s; display: flex;align-items:center; background-color: rgba(136, 136, 136, 0.148);border-radius: 5px;}
+.option:hover{box-shadow: 2px 4px 8px rgba(145, 145, 145, 0.596);cursor: pointer;transform: scale(102%);}
+.option i{color: #012469;width: 40px;transition: .1s;}
+
+
+.open .option{margin: 5px 0;padding: 15px 0 15px 30px;width: 240px;}
+.open p{width: 130px;overflow: hidden;font-size: 20px;}
+.close .option{padding: 15px;margin: 5px 0;width: 60px;}
+.close p{width: 0;overflow: hidden;}
+.close i{text-align: center;font-size: 25px;}
+.active{background-color: #012469;}
+.active i{color:white ;}
+.active p{color: white;}
