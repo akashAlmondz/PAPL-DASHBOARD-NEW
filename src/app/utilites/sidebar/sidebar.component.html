@@ -1,7 +1,7 @@
 <main>
     <img src="/assets/images/logo.jpg" alt="logo">
     <div class="menu-options" [ngClass]="sidebarValue? 'open':'close'" >
-        <div class="option" *ngFor="let item of sidebarData"  (click)="changeSelectedValue(item.number)" [ngClass]="selectedValue === item.number?'active':'' " >
+        <div [routerLink]='item.path' class="option" *ngFor="let item of sidebarData"  (click)="changeSelectedValue(item.number)" [ngClass]="selectedValue === item.number?'active':'' " >
             <i class="{{item.icon}}"></i>
             <p>{{item.label}}  </p>
         </div>

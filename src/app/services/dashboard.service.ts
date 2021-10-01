@@ -16,4 +16,10 @@ export class DashboardService {
   public QRcode(){
     return this.http.get(`${environment.authlink}qr-code/numberofQR`)
   }
+  
+  public graphData(){
+    return this.http.get(`${environment.authlink}users/scannedData`)
+  }
+
+
 }

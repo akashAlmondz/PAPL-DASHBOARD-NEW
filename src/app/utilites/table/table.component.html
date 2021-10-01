@@ -1,0 +1,28 @@
+
+<label for="">Search by:</label>
+<input class="input" type="text" [(ngModel)]="shop"  (input)="Search()" placeholder="Outlet.." />
+<input class="input" type="text" [(ngModel)]="address"  (input)="SearchAddress()" placeholder="Address.."  />
+    
+<table>
+    <tr>
+       <th  >Sr. No.</th>
+       <th>Phone Number</th>
+       <th>No. Of Scans</th>
+       <th>Shop</th>
+       <th>Address</th>
+       <th>Date & Time</th>
+       <th>Scheme</th>
+        
+    </tr>
+    
+    <tr *ngFor="let item of data , index as i" >
+        <td>{{i+1}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.numberOfScan}}</td>
+        <td>{{item.shop}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.createdAt}}</td>
+        <td>{{item.scheme}}</td>
+    </tr>
+ 
+</table>

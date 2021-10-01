@@ -11,8 +11,8 @@ export class SidebarComponent implements OnInit {
   constructor() { this.sidebarValue = false}
   selectedValue: number = 1;
    sidebarData = [
-     {number:1, icon:"fas fa-user",label:'Dashboard'},
-     {number:2, icon:"fas fa-briefcase",label:'Reports'},
+     {number:1, icon:"fas fa-user",label:'Dashboard',path:''},
+     {number:2, icon:"fas fa-briefcase",label:'Reports',path:'report'},
      {number:3, icon:'fas fa-th',label:'Demo'},
      {number:4, icon:'fas fa-warehouse',label:'Demo'},
      {number:5, icon:'fas fa-user-friends',label:'Demo'},

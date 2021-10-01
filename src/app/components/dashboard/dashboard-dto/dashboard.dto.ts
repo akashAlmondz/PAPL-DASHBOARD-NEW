@@ -8,3 +8,12 @@ export interface DashboardDto{
     deletedAt:string;
 
 }
+
+export interface employees{
+    phoneNumber:string;
+    numberOfScan:number;
+    shop:string;
+    address:string;
+    createdAt:string;
+    scheme:string;
+}

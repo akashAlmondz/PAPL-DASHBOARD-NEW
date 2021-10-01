@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DashboardService } from 'src/app/services/dashboard.service';
 import { environment } from 'src/environments/environment';
-import { DashboardDto } from './dashboard-dto/dashboard.dto';
+import { DashboardDto, employees } from './dashboard-dto/dashboard.dto';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,11 +12,13 @@ import { DashboardDto } from './dashboard-dto/dashboard.dto';
 })
 export class DashboardComponent implements OnInit {
 
-  
+  employess :any=[]
   constructor(private dashBoardService: DashboardService) { }  
  
-  data:any=[]; 
+  data:any=[];
+  addressData:any=[]; 
   QRdata:any=[];
+  
   
   orderData = [
     {class:'a', label:"Total QR codes",quantity:this.QRdata[0],status:"QR codes are reamining"},
@@ -29,8 +31,13 @@ export class DashboardComponent implements OnInit {
  
 
   ngOnInit(): void {
+    // this.dashBoardService.dashboardTable().subscribe(x=>this.addressData=x);
     this.dashBoardService.dashboardTable().subscribe(x=>this.data=x);
     this.dashBoardService.QRcode().subscribe(y=>this.QRdata=y);
+    
+  }
+  
+  
   }
 
-}
+

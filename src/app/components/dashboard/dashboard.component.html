@@ -10,36 +10,12 @@
     </div>
  <h2>Statistic</h2>
         <div class="statistic">
-            <div class="stocks">
-                <h1 (click)='test()' >Stocks</h1>
-            </div>
-            <div class="stocks">
-                <h1>Orders</h1>
-            </div>
+            
+                <app-graph></app-graph>
+           
+           
         </div>
 
-<table>
-    <tr>
-       <th  >Sr. No.</th>
-       <th>Phone Number</th>
-       <th>No. Of Scans</th>
-       <th>Shop</th>
-       <th>Address</th>
-       <th>Date & Time</th>
-       <th>Scheme</th>
-        
-    </tr>
-    
-    <tr *ngFor="let item of data , index as i" >
-        <td>{{i+1}}</td>
-        <td>{{item.phoneNumber}}</td>
-        <td>{{item.numberOfScan}}</td>
-        <td>{{item.shop}}</td>
-        <td>{{item.address}}</td>
-        <td>{{item.createdAt}}</td>
-        <td>{{item.scheme}}</td>
-    </tr>
-
-</table>
+<app-table></app-table>
 
 </main>
