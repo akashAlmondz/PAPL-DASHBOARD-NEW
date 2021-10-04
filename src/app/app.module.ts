@@ -11,6 +11,7 @@ import { GraphComponent } from './graph/graph.component';
 import { ReportComponent } from './components/report/report.component';
 import { TableComponent } from './utilites/table/table.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HighchartsChartModule,
     HttpClientModule,
     FormsModule,
+    NgxPaginationModule
     
   ],
   providers: [],
