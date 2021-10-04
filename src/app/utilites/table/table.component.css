@@ -1,7 +1,7 @@
 table{width: 100%;margin: 20px 0 50px 0;border-collapse: collapse;box-shadow: 6px 8px 16px rgba(201, 195, 162, 0.822);}
 table th{background-color: #E6CCA1;padding: 20px 0px;}
 table td{text-align: center;padding: 20px 0px;border-bottom:1px solid black ;}
-
+.head{display: flex; justify-content: space-between;}
 /* td:nth-child(odd){
     background-color: rgb(230, 238, 243);
 } */
@@ -19,3 +19,7 @@ label{font-size: 20px;}
 }
 
 .input:focus{outline: none;}
+.download{display: flex;align-items: center;}
+.download p{margin-right: 30px;}
+.button{cursor: pointer; box-shadow: 6px 8px 16px rgba(201, 195, 162, 0.822);border-radius: 5px; background-color: #E6CCA1;border: none;padding: 10px 20px;display: flex;justify-content: space-between;align-items: center;width: 120px;}
+.btn{cursor: pointer; background:none;border: none;}

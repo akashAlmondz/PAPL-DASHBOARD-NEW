@@ -1,28 +1,45 @@
+<div class="head">
+    <div class="search">
+        <label for="">Search by:</label>
+        <input class="input" type="text" [(ngModel)]="shop"  (input)="Search()" placeholder="Outlet.." />
+        <input class="input" type="text" [(ngModel)]="address"  (input)="SearchAddress()" placeholder="Address.."  />
+    </div>
+    <div class="download">
+        <p>Download Report (.pdf, .xlsx) </p>
+        <div class="button">
+            <i class="fas fa-download"></i>
+            <input type="button" value="Download" class="btn btn-success" (click)="SavePDF()">
+        </div>
+    </div>
+</div>
 
-<label for="">Search by:</label>
-<input class="input" type="text" [(ngModel)]="shop"  (input)="Search()" placeholder="Outlet.." />
-<input class="input" type="text" [(ngModel)]="address"  (input)="SearchAddress()" placeholder="Address.."  />
-    
-<table>
-    <tr>
-       <th  >Sr. No.</th>
-       <th>Phone Number</th>
-       <th>No. Of Scans</th>
-       <th>Shop</th>
-       <th>Address</th>
-       <th>Date & Time</th>
-       <th>Scheme</th>
+
+<div id="content" #content>
+    <table >
+        <tr>
+        <th  >Sr. No.</th>
+        <th>Phone Number</th>
+        <th>No. Of Scans</th>
+        <th>Shop</th>
+        <th>Address</th>
+        <th>Date & Time</th>
+        <th>Scheme</th> 
+            
+        </tr>
         
-    </tr>
-    
-    <tr *ngFor="let item of data , index as i" >
-        <td>{{i+1}}</td>
-        <td>{{item.phoneNumber}}</td>
-        <td>{{item.numberOfScan}}</td>
-        <td>{{item.shop}}</td>
-        <td>{{item.address}}</td>
-        <td>{{item.createdAt}}</td>
-        <td>{{item.scheme}}</td>
-    </tr>
- 
-</table>
+        <tr *ngFor="let item of data  | paginate: { currentPage: p, itemsPerPage: 5}  let i=index"> 
+            <td>{{i+1}}</td>
+            <td>{{item.phoneNumber}}</td>
+            <td>{{item.numberOfScan}}</td>
+            <td>{{item.shop}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.createdAt}}</td>
+            <td>{{item.scheme}}</td>
+        </tr>
+        
+    </table>
+    <pagination-controls (pageChange)= "p= $event"> </pagination-controls>
+</div>    
+
+
+
